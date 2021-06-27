@@ -2,6 +2,8 @@ import { useHistory, useParams } from "react-router-dom";
 
 import logoImg from "../assets/images/logo.svg";
 import deleteImg from "../assets/images/delete.svg";
+import checkImg from "../assets/images/check.svg";
+import answerImg from "../assets/images/answer.svg";
 
 import { Button } from "../components/Button";
 import { Question } from "../components/Question";
@@ -27,8 +29,9 @@ export function AdminRoom() {
 
   const { title, questions } = useRoom(roomId);
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [questionToDelete, setQuestionToDelete] = useState<string>('');
+  const [deleteModalOpen, setDeleteModalOpen] = useState<boolean>(false);
+  const [endRoomOpen, setEndRoomOpen] = useState<boolean>(false);
 
   async function handleEndRoom() {
     await database.ref(`rooms/${roomId}`).update({
@@ -44,6 +47,20 @@ export function AdminRoom() {
     }
   }
 
+  async function handleCheckQuestionAsAnswered(questionId: string) {
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isAnswered: true
+    });
+
+  }
+
+  async function handleHighlightQuestion(questionId: string) {
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isHighlighted: true
+    });
+
+  }
+
   return (
     <div id="page-room">
       <header>
@@ -51,7 +68,8 @@ export function AdminRoom() {
           <img src={logoImg} alt="Letmeask" />
           <div>
             <RoomCode code={roomId} />
-            <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
+            <Button isOutlined onClick={() => setEndRoomOpen(!endRoomOpen)
+            }>Encerrar sala</Button>
           </div>
         </div>
       </header>
@@ -70,11 +88,29 @@ export function AdminRoom() {
                 key={question.id}
                 content={question.content}
                 author={question.author}
+                isAswered={question.isAnswered}
+                isHighlighted={question.isHighlighted}
               >
+                {!question.isAnswered && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => handleCheckQuestionAsAnswered(question.id)}
+                    >
+                      <img src={checkImg} alt="Marcar pergunta como respondida" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleHighlightQuestion(question.id)}
+                    >
+                      <img src={answerImg} alt="Dar destaque à pergunta" />
+                    </button>
+                  </>
+                )}
                 <button
                   type="button"
                   onClick={() => {
-                    setIsOpen(!isOpen);
+                    setDeleteModalOpen(!deleteModalOpen);
                     setQuestionToDelete(question.id)
                   }}
                 >
@@ -85,8 +121,43 @@ export function AdminRoom() {
           })}
         </div>
       </main>
+      <ModalComponent isOpen={endRoomOpen}>
+        <div className="delete-img">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.66 18.3398L18.34 29.6598" stroke="#E73F5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M29.66 29.6598L18.34 18.3398" stroke="#E73F5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 42V42C14.058 42 6 33.942 6 24V24C6 14.058 14.058 6 24 6V6C33.942 6 42 14.058 42 24V24C42 33.942 33.942 42 24 42Z" stroke="#E73F5D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <h2 className="title">
+          Encerrar sala
+        </h2>
+        <p className="description">Tem certeza que você deseja encerrar esta sala?</p>
+        <div className="buttons">
+          <button
+            className="cancel"
+            onClick={() => {
+              setEndRoomOpen(false);
+            }}
+          >
+            Cancelar
+          </button>
+          <button
+            className="end-room"
+            onClick={() => {
+              setDeleteModalOpen(false);
+              handleEndRoom();
+            }}
+          >
+            Sim, encerrar
+          </button>
+        </div>
+      </ModalComponent>
+
+
       <ModalComponent
-        isOpen={isOpen}
+        isOpen={deleteModalOpen}
       >
 
         <div className="delete-img">
@@ -104,7 +175,7 @@ export function AdminRoom() {
           <button
             className="cancel"
             onClick={() => {
-              setIsOpen(false);
+              setDeleteModalOpen(false);
               setQuestionToDelete('');
             }}
           >
@@ -113,7 +184,7 @@ export function AdminRoom() {
           <button
             className="delete"
             onClick={() => {
-              setIsOpen(false);
+              setDeleteModalOpen(false);
               handleDeleteQuestion(questionToDelete);
             }}
           >
