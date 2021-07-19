@@ -8,7 +8,7 @@
 ## <div align="center">**Letmeask**</div>
 
 ## Índice 🗺 : 
-- [O que é o Letmeask?](o-que-é-o-letmeask)
+- [O que é o Letmeask?](#o-que-é-o-letmeask)
 - [Como usar?](como-usar)
 - [Como clonar o repositório?](como-clonar-o-repositório)
 - [Como iniciar o projeto?](como-iniciar-o-projeto)
