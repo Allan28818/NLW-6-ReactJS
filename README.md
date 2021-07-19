@@ -9,19 +9,19 @@
 
 ## Índice 🗺 : 
 - [O que é o Letmeask?](#o-que-é-o-letmeask)
-- [Como usar?](como-usar)
-- [Como clonar o repositório?](como-clonar-o-repositório)
-- [Como iniciar o projeto?](como-iniciar-o-projeto)
-- [Login](login)
-- [Criar uma sala](criar-uma-sala)
-- [Entrar em uma sala já existente](entrar-em-uma-sala-já-existente)
-- [Encerrar uma sala](encerrar-uma-sala)
-- [Marcar pergunta como lida](marcar-uma-pergunta-como-lida)
-- [Remover uma pergunta](remover-uma-pergunta)
-- [Destacar uma pergunta](destacar-uma-pergunta)
-- [Votar em uma pergunta](votar-em-uma-pergunta)
-- [Tecnologias usadas](tecnologias-usadas)
-- [Minhas redes sociais](minhas-redes-sociais)
+- [Como usar?](#como-usar)
+- [Como clonar o repositório?](#como-clonar-o-repositório)
+- [Como iniciar o projeto?](#como-iniciar-o-projeto)
+- [Login](#login)
+- [Criar uma sala](#criar-uma-sala)
+- [Entrar em uma sala já existente](#entrar-em-uma-sala-já-existente)
+- [Encerrar uma sala](#encerrar-uma-sala)
+- [Marcar pergunta como lida](#marcar-uma-pergunta-como-lida)
+- [Remover uma pergunta](#remover-uma-pergunta)
+- [Destacar uma pergunta](#destacar-uma-pergunta)
+- [Votar em uma pergunta](#votar-em-uma-pergunta)
+- [Tecnologias usadas](#tecnologias-usadas)
+- [Minhas redes sociais](#minhas-redes-sociais)
 
 ## O que é o Letmeask?
 ## 😕⁉
