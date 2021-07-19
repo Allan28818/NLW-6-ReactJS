@@ -8,20 +8,20 @@
 ## <div align="center">**Letmeask**</div>
 
 ## Índice 🗺 : 
-- [O que é o Letmeask?](O-que-é-o-Letmeask?)
-- [Como usar?](Como-usar?)
-- [Como clonar o repositório?](Como-clonar-o-repositório?)
-- [Como iniciar o projeto?](Como-iniciar-o-projeto?)
-- [Login](Login)
-- [Criar uma sala](Criar-uma-sala)
-- [Entrar em uma sala já existente](Entrar-em-uma-sala-já-existente)
-- [Encerrar uma sala](Encerrar-uma-sala)
-- [Marcar pergunta como lida](Marcar-uma-pergunta-como-lida)
-- [Remover uma pergunta](Remover-uma-pergunta)
-- [Destacar uma pergunta](Destacar-uma-pergunta)
-- [Votar em uma pergunta](Votar-em-uma-pergunta)
-- [Tecnologias usadas](Tecnologias-usadas)
-- [Minhas redes sociais](Minhas-redes-sociais)
+- [O que é o Letmeask?](o-que-é-o-letmeask)
+- [Como usar?](como-usar)
+- [Como clonar o repositório?](como-clonar-o-repositório)
+- [Como iniciar o projeto?](como-iniciar-o-projeto)
+- [Login](login)
+- [Criar uma sala](criar-uma-sala)
+- [Entrar em uma sala já existente](entrar-em-uma-sala-já-existente)
+- [Encerrar uma sala](encerrar-uma-sala)
+- [Marcar pergunta como lida](marcar-uma-pergunta-como-lida)
+- [Remover uma pergunta](remover-uma-pergunta)
+- [Destacar uma pergunta](destacar-uma-pergunta)
+- [Votar em uma pergunta](votar-em-uma-pergunta)
+- [Tecnologias usadas](tecnologias-usadas)
+- [Minhas redes sociais](minhas-redes-sociais)
 
 ## O que é o Letmeask?
 ## 😕⁉
