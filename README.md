@@ -199,6 +199,6 @@ Para me seguir e me acompanhar nas redes sociais veja meu Linkedin e Instagram e
 ## Créditos:
 Agradeço a [Rockeseat](https://www.linkedin.com/school/rocketseat/), que na edição 6 da NLW me ajudou e ajudou diversos outros desenvolvedores e desenvolvedoras a avançar para o próximo nível!
 
-<div align="center"><img src="https://media-exp1.licdn.com/dms/image/C560BAQFU-ZKLLdANXg/company-logo_200_200/0/1596796119888?e=1631750400&v=beta&t=_KXUYZKQqJDFFPgPZVOGq1EepVTHhFU_osnSVgX_dT4" alt="Rockeseat - profile image"></div>
+<div align="center"><img src="https://media-exp1.licdn.com/dms/image/C560BAQFU-ZKLLdANXg/company-logo_200_200/0/1596796119888?e=1631750400&v=beta&t=_KXUYZKQqJDFFPgPZVOGq1EepVTHhFU_osnSVgX_dT4" alt="Rockeseat - profile image" width="50%" height="50%"></div>
 
   
